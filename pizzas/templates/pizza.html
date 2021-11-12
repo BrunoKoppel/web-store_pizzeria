@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 20px;">
+  <h3>
+    <a href="/">
+      Home
+    </a>
+  </h3>
+  <h3>
+    <a href="/menu">
+      Menu
+    </a>
+  </h3>
+</div>
+<h2 style="margin-top: 50px; text-align: center;">
+  {{ pizza.name }} Pizza Toppings
+</h2>
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  {% for topping in toppings %}
+  <li>{{ topping.name }}</li>
+  {% endfor%}
+</div>
+{% endblock content %}

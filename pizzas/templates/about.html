@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block content %}
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 20px;">
+  <h3>
+    <a href="{% url 'pizzas:pizza' %}">
+      Menu
+    </a>
+  </h3>
+  <h3>
+    <a href="/">
+      Home
+    </a>
+  </h3>
+</div>
+<div>
+  <p style="text-align: center;">
+    Originally from the nonexistent realm of the void. 
+    Lover's pizzeria has been a family owned business since the 10,000BC. 
+    We pride ourselves in our long standing recipes and 
+    our love for the craft of the perfect pizza
+  </p>
+</div>
+{% endblock content %}

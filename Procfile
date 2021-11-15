@@ -1,0 +1,1 @@
+gunicorn pizzeria.wsgi --log-file -

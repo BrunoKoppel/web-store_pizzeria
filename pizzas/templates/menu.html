@@ -11,10 +11,17 @@
       About
     </a>
   </h3>
+  <h3>
+    <a href="/menu/new_pizza/">
+      Add A New Pizza
+    </a>
+  </h3>
 </div>
+
 <h2 style="margin-top: 50px; text-align: center;">
   Selection
 </h2>
+
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
   {% for pizza in pizzas %}
     <h4><a href="{% url 'pizzas:pizza' pizza.id %}">{{ pizza.name }} Pizza</a></h4>

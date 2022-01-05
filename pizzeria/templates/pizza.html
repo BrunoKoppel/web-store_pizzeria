@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 20px;">
+  <h3>
+    <a href="/">
+      Home
+    </a>
+  </h3>
+  <h3>
+    <a href="/menu">
+      Menu
+    </a>
+  </h3>
+</div>
+<h2 style="margin-top: 50px; text-align: center;">
+  {{ pizza.name }} Pizza Toppings
+</h2>
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  {% for topping in toppings %}
+  <li>{{ topping.name }}
+    <p>{{ topping.date_added|date:'M d, Y H:i' }}</p>
+    <p>{{ topping.text|linebreaks }}</p>
+    {% block add_topping_from %}
+    {% endblock add_topping_from %}
+  </li>
+  {% empty %}
+  <li> There no toppings for this pizza yet.</li>
+  {% endfor%}
+  <p>
+    <a href="{% url 'pizzas:new_topping' pizza.id %}">
+      Add Toppings
+    </a>
+  </p>
+</div>
+{% endblock content %}

@@ -1,0 +1,5 @@
+.env
+debug.log
+pizzeria/__pycache__
+pizzas/__pycache__
+pizzas/migrations/__pycache__
